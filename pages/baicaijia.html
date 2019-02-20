@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入 首页 less -->
+    <link rel="stylesheet/less" href="../less/baicaijia.less">
+</head>
+
+<body>
+    <header id="header">
+        <div class="left">
+            <a class="fa fa-angle-left" href="javaScript:history.back()"></a>
+            <!-- <a href="javascript:void(0)">
+                <img src="../images/header_logo.png" alt="">
+            </a> -->
+        </div>
+        <div class="center">白菜价-淘宝内部券</div>
+        <div class="right">
+            <a href="javascript:void(0)">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+    <!-- 导航条部分 开始 -->
+    <nav id="nav">
+        <!-- 导航条滑动部分 -->
+        <div class="mui-scroll-wrapper mui-slider-indicatorcode mui-segmented-control mui-segmented-control-inverted scroll-nav">
+            <div class="mui-scroll">
+                <ul class="nav-category clearfix"></ul>
+            </div>
+        </div>
+        <!-- 搜索按钮 -->
+        <div class="search-btn">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </nav>
+    <!-- 搜索条 -->
+    <div class="search">
+        <input type="text" placeholder="请输入商品内容"><span>搜索</span>
+    </div>
+    <!-- 导航条部分 结束 -->
+    <!-- 主体部分开始 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-table-view goods-view"></ul>
+                <!-- 尾部开始 -->
+                <div id="footer">
+                    <div class="rank">
+                        <p>品牌排行</p>
+                        <span class="fa fa-chevron-right"></span>
+                    </div>
+                    <div class="enter">
+                        <ul>
+                            <li>
+                                <a href="#">登录</a>
+                            </li>
+                            <li>
+                                <a href="#">注册</a>
+                            </li>
+                            <li>
+                                <a href="#" class="back-top">返回顶部</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="download">
+                        <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+                        <p>m.manmanbuy.com</p>
+                    </div>
+                </div>
+                <!-- 尾部结束 -->
+            </div>
+        </div>
+
+    </main>
+    <!-- 主体部分结束 -->
+    <!-- 返回顶部的按钮 -->
+    <div class="btn-backTop">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </div>
+    
+
+    <!-- 导航条部分模板 -->
+    <script type="text/html" id="nav-tml">
+        {{ each list value index }}
+        {{ if index ==0 }}
+        <li class="active" data-title-id = "{{ value.titleId}}">{{ value.title }}</li>
+        {{ else }}
+        <li  data-title-id = "{{ value.titleId}}">{{ value.title }}</li>
+        {{ /if }}
+        {{ /each}}
+    </script>
+    <!-- 商品模板 -->
+    <script type="text/html" id="goods-tml">
+        {{ each list value index}}
+        <li class="mui-table-view-cell mui-media">
+                <div>
+                    {{@value.productImg}}
+                    <div class="mui-media-body">
+                        <div class="title">
+                                {{@value.productName }}
+                        </div>
+                        <div class="price">
+                            {{@value.productPrice}}
+                        </div>
+                        {{@value.productCouponRemain}}
+                        <div class="links">
+                                {{@value.productCoupon}}
+                                {{@value.productHref}}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {{ /each}}
+    </script>
+    <!-- 引入识别 less文件js -->
+    <script src="../lib/less/less.js"></script>
+    <!-- 引入 mui js -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 引入 移动端jquery  -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 引入 模板引擎 js-->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 引入 首页 js -->
+    <script src="../js/baicaijia.js"></script>
+</body>
+
+</html>

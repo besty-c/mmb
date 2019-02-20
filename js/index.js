@@ -53,12 +53,12 @@ $(function(){
         }
     })
     // 点击进入商品详情页
-    //    $(".discount").on("tap",".box",function(){
-    //        console.log($(this).data("id"));
-        // var id = $(this).data("id")
-        //    location="/pages/inlanddiscountDetail.html?id="+id;
+       $(".discount").on("tap",".box",function(){
+           console.log($(this).data("id"));
+        var id = $(this).data("id")
+           location="pages/shoppls.html?id="+id;
            
-    //    })
+       })
        
    
     

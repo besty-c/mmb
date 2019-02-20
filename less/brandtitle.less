@@ -1,0 +1,94 @@
+@import 'base.less';
+
+a{
+    color: #000;
+}
+// 头部
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+// 搜索框
+.search {
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    padding: .1rem;
+    font-size: .14rem;
+    width: 100%;
+    top: .45rem;
+    left: 0;
+    z-index: 999;
+    ;
+
+    input {
+        background-color: #f1f1f1;
+        height: .3rem;
+        margin-bottom: 0;
+        flex: 1;
+        border-radius: .15rem;
+        font-size: .14rem;
+    }
+
+    span {
+        height: .3rem;
+        width: 15%;
+        border-radius: .15rem;
+        text-align: center;
+        line-height: .3rem;
+        margin-left: .1rem;
+        background-color: #ff841d;
+    }
+}
+
+// 主体部分
+.mui-scroll-wrapper{
+    padding-top: 1rem;
+}
+#main {
+    padding-top: .1rem;
+    background-color: #fff;
+    // 导航
+    nav#nav {
+        margin-left: .05rem;
+        height: .3rem;
+        line-height: .3rem;
+        background-color: #f6f6f6;
+    }
+
+    // 标题
+    .title {
+        margin: .05rem 0;
+        padding-left: .05rem;
+        height: .4rem;
+        line-height: .4rem;
+        background-color: #eee;
+        color: #9d6b37;
+    }
+
+    // 分类名称
+    .mmb-brandtitle {
+        background-color: #f1f1f1;
+        li {
+            .mmb-getbrand {
+                .brand {
+                    height: .3rem;
+                    line-height: .3rem;
+                    color: #000;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}
+
+// 底部
+#footer {
+    .enter {
+        padding-top: .2rem;
+    }
+}
