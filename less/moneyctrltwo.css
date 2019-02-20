@@ -1,0 +1,158 @@
+html {
+  font-size: 26.666667vw;
+}
+body {
+  font-size: 0.14rem;
+  height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#header {
+  display: flex;
+  background-color: #ff841d;
+}
+#header .left {
+  width: 0.45rem;
+  height: 0.45rem;
+  text-align: center;
+  line-height: 0.45rem;
+  font-size: .32rem;
+  color: #fff;
+}
+#header .center {
+  flex: 1;
+  text-align: center;
+  line-height: 0.45rem;
+  height: 0.45rem;
+}
+#header .center p {
+  font-size: .2rem;
+  color: #fff;
+}
+#header .right {
+  width: 0.7rem;
+  height: 0.45rem;
+  text-align: center;
+  color: #fff;
+}
+#header .right .fa-download {
+  font-size: .2rem;
+  margin-top: .05rem;
+}
+#header .right p {
+  font-size: 0.10rem;
+  color: #fff;
+}
+#main .conter .shangmian {
+  padding: .04rem .2rem;
+}
+#main .conter .shangmian .tupian {
+  text-align: center;
+}
+#main .conter .shangmian .tupian img {
+  width: 2.23rem;
+  height: 2.23rem;
+}
+#main .conter .shangmian .info {
+  margin: .12rem auto;
+  color: #999999;
+  font-size: .12rem;
+}
+#main .conter .shangmian .xiangqing {
+  font-size: .22rem;
+  line-height: .3rem;
+}
+#main .conter .shangmian .baoyou {
+  color: orange;
+  font-size: .16rem;
+}
+#main .conter .shangmian .lianjie {
+  width: 100%;
+  background-color: orange;
+  text-align: center;
+}
+#main .conter .shangmian .lianjie a {
+  height: .4rem;
+  line-height: .4rem;
+  color: #fff;
+}
+#main .conter .shangmian .leirong {
+  font-size: .16rem;
+  line-height: .24rem;
+}
+#main .conter .shangmian .leirong .bigimg {
+  width: 3.31rem;
+  height: 3.31rem;
+}
+#main .conter .shangmian .leirong .bigimg img {
+  margin-top: .1rem;
+  width: 100%;
+  height: 100%;
+}
+#footer {
+  height: 1rem;
+}
+#footer .rank {
+  background-color: #ff9711;
+  display: flex;
+  line-height: .35rem;
+  justify-content: space-between;
+}
+#footer .rank p {
+  margin: 0;
+  font-size: .14rem;
+  color: #fff;
+  padding-left: .1rem;
+}
+#footer .rank span {
+  line-height: .35rem;
+  color: #fff;
+  padding-right: .1rem;
+  font-size: .14rem;
+}
+#footer .enter {
+  padding: 0;
+}
+#footer .enter ul {
+  display: flex;
+  border-top: .02rem solid #ccc;
+  border-bottom: .02rem solid #ccc;
+}
+#footer .enter ul li {
+  list-style: none;
+  line-height: .3rem;
+  text-align: center;
+  width: 1.2rem;
+  height: 0.3rem;
+}
+#footer .enter ul li:nth-child(1),
+#footer .enter ul li:nth-child(2) {
+  border-right: .02rem solid #ccc;
+}
+#footer .enter ul li:nth-child(3) {
+  flex: 1;
+}
+#footer .enter ul li a {
+  font-size: .16rem;
+  color: #000;
+}
+#footer .download {
+  padding: .15rem 0;
+  text-align: center;
+}
+#footer .download p {
+  margin: 0;
+  font-size: .14rem;
+  line-height: .18rem;
+}
+#footer .download p:nth-child(1) {
+  color: #000;
+}
+#footer .download p:nth-child(1) a {
+  color: red;
+}
+#footer .download p:nth-child(1) span {
+  color: #9d9d9d;
+}
