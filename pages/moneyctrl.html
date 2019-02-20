@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <!-- 引入插件文档 -->
+    <link rel="stylesheet" href="/lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/lib/mui/css/mui.css">
+    <link rel="stylesheet/less" href="/less/moneyctrl.less">
+    <script src="/lib/zepto/zepto.min.js"></script>
+    <script src="/lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="left fa fa-angle-left"></a>
+        <div class="center">
+            <p>省钱控-最新优惠</p>
+        </div>
+        <a href="#" class="right">
+            <span class="fa fa-download"></span>
+            <p>App下载</p>
+        </a>
+    </header>
+    <!-- 商品列表区域 -->
+    <main id="main">
+        <!--这里放置真实显示的DOM内容-->
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="http://img2017.manmanbuy.com/Thumb_2018060019592252786.jpg">
+                    <div class="mui-media-body">
+                        <p class="product-name">漫威 MARVEL 蜘蛛侠公仔 汽车用品摆件
+                            <span>10.9元</span>
+                        </p>
+                        <p class="mui-ellipsis mui-clearfix">
+                            <span class="mui-pull-left">京东商城 | 06-13 20:11</span>
+                            <span class="mui-pull-right"> <i class="fa fa-commenting-o"></i> 0</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+    </main>
+    <!-- 分页按钮 -->
+    <section id="paging">
+            <a href="javascript:getData(page-1)" class="mui-btn mui-btn-outlined previous" id="previous">上一页</a> 
+            <select name="selectAge" id="selectAge">
+            </select>
+            <a href="javascript:getData(page+1)" class="mui-btn mui-btn-outlined" id="below">下一页</a>
+    </section>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                
+                    <a href="#" id="toTOP"><i class="fa fa-chevron-circle-up"></i>返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- 引入插件文档 -->
+<script src="/lib/artTemplate/template-web.js"></script>
+<script src="/lib/mui/js/mui.js"></script>
+<script src="/js/moneyctrl.js"></script>
+<script type="text/html" id="monenyTpl">
+    {{each result value}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="shoppls.html?id={{value.productId}}">
+                  {{@value.productImgSm}}
+                <div class="mui-media-body">
+                    <p class="product-name">{{ value.productName }}<span>{{value.productPinkage}}</span></p>
+                    <p class='mui-ellipsis mui-clearfix'>
+                        <span class="mui-pull-left">{{value.productFrom}} | {{value.productTime}}</span>
+                        <span class="mui-pull-right"> <i class="fa fa-commenting-o"></i>
+                        {{value.productComCount.replace('有','').replace('人评论','')}}
+                        </span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+</script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="/lib/mui/css/mui.css">
+    <!-- 导入图标 -->
+    <link rel="stylesheet" href="/lib/fontAwesome/css/font-awesome.css">
+    <!-- 导入less -->
+    <link rel="stylesheet/less" href="/less/shoppls.less">
+    <script src="/lib/less/less.js"></script>
+    <script src="/lib/zepto/zepto.min.js"></script>
+</head>
+
+<body>
+        <header id="header">
+                <a href="index.html" class="left fa fa-angle-left"></a>
+                <div class="center">
+                    <p>优惠详情</p>
+                </div>
+                <a href="#" class="right">
+                    <span class="fa fa-download"></span>
+                    <p>App下载</p>
+                </a>
+            </header>
+    <main id="main">
+        <div class="conter">
+            <div class="shangmian">
+                <div class="tupian">
+                    <img src="http://img2019.manmanbuy.com/r_img/img/20181117/11/90cbd334ddb74d57b40791a45aa7993f.jpg"
+                        alt="">
+                </div>
+                <div class="info">
+                    <span class="mall">京东商城</span> |
+                    <span class="addtime" style="margin-right: 4px;">02-18 10:37</span> | <span class="author">Zero8023
+                        | 慢慢买</span>
+                </div>
+                <h2 class="xiangqing">Panasonic 松下 XQG90-EG93D 9公斤 变频 洗烘一体机</h2>
+                <p class="baoyou">5968元包邮</p>
+                <div class="lianjie">
+                    <a href="">直达链接</a>
+                </div>
+                <div class="leirong">
+                    <p>Panasonic松下XQG90-EG93D变频洗烘一体机，是松下比较高端的系列。洗涤容量为9公斤，烘干容量为6公斤，洗衣机采用Care+健康净护系统，立体多维的洗涤方式瓦解异味、细菌和螨虫，实现深度清洁，支持Ag+光动银出技术，95度高温模式，有效杀菌。特有筒洗净程序和门窗自洁系统。产品采用自循环烘干技术，高效烘干，智能安全，配有减震降噪系统，高效变频电机，一级能效。525mm超宽内筒，搭配多样化洗涤程序，内置穹顶式内筒灯，搭配LED显示屏。产品尺寸（深×宽×高）578*596*845mm。</p>
+                    <p><a href="#">京东</a>
+                        现在下单立减600元到手价5998元包邮。
+                    </p>
+                    <p class="bigimg">
+                            <img src="http://img2019.manmanbuy.com/r_img/img/20181117/11/90cbd334ddb74d57b40791a45aa7993f.jpg"
+                            alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="comment">
+        <div>
+            <h4>发表评论</h4>
+             <textarea name="" id="" cols="20" rows="5">
+                  </textarea> 
+                  <button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">发表评论</button>
+        </div>
+        <div class="newComment">
+            <h4>最新评论</h4>
+        </div>
+    </section> <!-- 底部区域 -->
+
+    <footer id="footer">
+            <div class="enter">
+                <ul>
+                    <li>
+                        <a href="#">登录</a>
+                    </li>
+                    <li>
+                        <a href="#">注册</a>
+                    </li>
+                    <li>
+                    
+                        <a href="#" id="toTOP"><i class="fa fa-chevron-circle-up"></i>返回顶部</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="download">
+                <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    <script type="text/html" id="moneyctrltwoTpl">
+       {{each result value index}} 
+
+       <div class="conter">
+        <div class="shangmian">
+            <div class="tupian">
+                <!-- <img src="http://img2019.manmanbuy.com/r_img/img/20181117/11/90cbd334ddb74d57b40791a45aa7993f.jpg"
+                    alt=""> -->
+                    {{@value.productImgSm}}
+            </div>
+            <div class="info">
+                <span class="mall">{{value.productFrom}}</span> |
+                <span class="addtime" style="margin-right: 4px;">{{value.productTime}}</span> | <span class="author">
+                    {{value.productTips}}</span>
+            </div>
+            <h2 class="xiangqing">{{value.productName}}</h2>
+            <p class="baoyou">{{value.productPinkage}}</p>
+            <div class="lianjie">
+                <a href="">直达链接</a>
+            </div>
+            <div class="leirong">
+                <p>{{value.productInfo}}</p>
+                <p><a href="#">{{value.productFrom}}</a>
+                    {{value.productInfo2}}
+                </p>
+                <p class="bigimg">
+                        {{@value.productImg2}}
+                </p>
+            </div>
+        </div>
+
+       {{/each}}
+    </script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="/lib/mui/js/mui.js"></script>
+    <script src="../js/shoppls.js"></script>
+</body>
+
+</html>
