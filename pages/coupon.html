@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买优惠券</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的less样式 -->
+    <link rel="stylesheet/less" href="../less/coupon.less">
+
+
+
+
+</head>
+
+<body>
+    <!-- 头部 开始 -->
+    <header class="header">
+        <div class="left">
+                <a href="javascript:history.back();"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        </div>
+        <div class="center">
+            <h4>优惠券</h4>
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+
+    <main id="main">
+        <div class="mui-row">
+            <div class="mui-col-xs-6">
+                <a class="product">
+                    <div class="product-img">
+                        <img src="" alt="">
+                    </div>
+                    <a href="#">肯德基</a>
+                </a>
+            </div>
+            
+        </div>
+    </main>
+    <!-- 尾部开始 -->
+    <footer id="footer">
+        <div class="rank">
+            <p><a href="../index.html">首页</a> > <a href="#">优惠券</a></p>
+            <span class="fa fa-chevron-right"></span>
+        </div>
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                    <a href="#">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 尾部结束 -->
+</body>
+
+</html>
+<script type="text/html" id="nav">
+    {{each result value index}}
+        <li id="number{{index}}">
+           <a href="pages/{{value.titlehref}}">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+           </a>
+        </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="product">
+    {{each result value index}}
+    <div class="mui-col-xs-6">
+           <a href="{{value.couponLink}}?couponid={{value.couponId}}" class="product">
+                <div class="product-img">
+                        <img src="{{value.couponImg}}" alt="">
+                    </div>
+                    <p>{{value.couponTitle}}</p>
+           </a>
+    </div>
+    {{/each}}
+</script>
+<!-- 引入识别 less文件js -->
+<script src="../lib/less/less.js"></script>
+<!-- 引入 mui js -->
+<script src="../lib/mui/js/mui.min.js"></script>
+<!-- 引入 移动端jquery  -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入 模板引擎 js-->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入 首页 js -->
+<!-- <script src="../js/index.js"></script> -->
+<!-- 引入 本页面的js -->
+<script src="../js/coupon.js"></script>

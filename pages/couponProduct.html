@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买优惠券商品详情</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的less样式 -->
+    <link rel="stylesheet/less" href="../less/couponProduct.less">
+
+
+
+
+</head>
+
+<body>
+    <!-- 头部 开始 -->
+    <header class="header">
+        <div class="left">
+                
+            <a href="javascript:history.back();"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        </div>
+        <div class="center">
+            <h4>必胜客优惠券</h4>
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+    <div class="tip">
+        <p>--点餐前出示手机中的优惠券,即可享受优惠--</p>
+    </div>
+    <main id="main">
+       <div class="mui-row">
+           <div class="mui-col-xs-4">
+               <img src="" alt="">
+           </div>
+           <div class="mui-col-xs-8">
+              <div class="top">
+                  <h3>必胜客以单品价点购任意饮料免费续杯一次</h3>
+                  <div class="product_bottom"> 有效期至2017年01月06日 </div><i class="fa fa-angle-right" aria-hidden="true"></i>
+              </div>
+           </div>
+       </div>
+    </main>
+    <!-- 尾部开始 -->
+    <footer id="footer">
+        <div class="rank">
+            <p><a href="../index.html">首页</a> > <a href="#">优惠券</a> > <a class="title" href="#">必胜客优惠券</a></p>
+            <span class="fa fa-chevron-right"></span>
+        </div>
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                    <a href="#">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 尾部结束 -->
+
+
+    <!-- 遮罩层 -->
+
+    <div class="mui-backdrop" style="display:none"  >
+            <div class="top"><i class="fa fa-times-circle" aria-hidden="true"></i> </div>
+        <!-- 轮播图 -->
+        <div id="slider" class="mui-slider" >
+                <div class="mui-slider-group mui-slider-loop">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/muwu.jpg">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/cbd.jpg">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
+<script type="text/html" id="nav">
+    {{each result value index}}
+        <li id="number{{index}}">
+           <a href="pages/{{value.titlehref}}">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+           </a>
+        </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="couponProduct">
+    {{each result value index}}
+    <div class="mui-col-xs-4">
+           {{@value.couponProductImg}}
+        </div>
+        <div class="mui-col-xs-8">
+           <div class="top">
+               <h3>{{value.couponProductName}}</h3>
+               <div class="product_bottom"> {{value.couponProductTime}} </div><i class="fa fa-angle-right" aria-hidden="true"></i>
+           </div>
+        </div>
+        {{/each}}
+</script>
+
+<script type="text/html" id="slide">
+    <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+              <!--支持循环，需要重复图片节点-->
+              <div class="mui-slider-item mui-slider-item-duplicate"><a href="#">{{@result[result.length - 1].couponProductImg}}</a></div>
+              {{each result value index}}
+              <div class="mui-slider-item"><a href="#">{{@value.couponProductImg}}</a></div>
+              {{/each}}
+              <!--支持循环，需要重复图片节点-->
+              <div class="mui-slider-item mui-slider-item-duplicate"><a href="#">{{@result[0].couponProductImg}}</a></div>
+              
+            </div>
+          </div>
+
+</script>
+
+
+
+
+
+
+<!-- 引入识别 less文件js -->
+<script src="../lib/less/less.js"></script>
+<!-- 引入 mui js -->
+<script src="../lib/mui/js/mui.min.js"></script>
+<!-- 引入 移动端jquery  -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入 模板引擎 js-->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入 首页 js -->
+<!-- <script src="../js/index.js"></script> -->
+<!-- 引入 本页面的js -->
+<script src="../js/couponProduct.js"></script>
