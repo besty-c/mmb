@@ -36,7 +36,7 @@ $(function () {
             });
             //隐藏遮罩层
 
-            $('.top .fa-times-circle').on('click', function () {
+            $('.top .fa-times-circle').on('tap', function () {
                 $('.mui-backdrop').hide();
             });
         }
@@ -46,7 +46,7 @@ $(function () {
 
 
     //显示遮罩层
-    $('.mui-row').on('click', function () {
+    $('.mui-row').on('tap', function () {
 
         $('.mui-backdrop').show();
     });
