@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全分类</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入  less -->
+    <link rel="stylesheet/less" href="../less/brandtitle.less">
+    <!-- 引入识别 less文件js -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部 开始 -->
+    <header id="header">
+        <div class="left-img">
+            <a href="#">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+    <!-- 搜索框 开始 -->
+    <section class="search">
+        <input type="text" placeholder="请输入商品内容"><span>搜索</span>
+    </section>
+    <!-- 搜索框 结束 -->
+    <!-- 主体 -->
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <main id="main">
+                <!-- 导航 -->
+                <nav id="nav">
+                    <a href="../index.html">首页</a>><a href="javascipt:;">全部分类</a>>
+                </nav>
+                <!-- 标题 -->
+                <div class="title">
+                    热门品牌排行
+                </div>
+                <!-- 标题 -->
+                <!-- <ul class="mui-table-view mmb-brandtitle">
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#" data-brandTitle="">面板1</a>
+                <div class="mui-collapse-content mmb-getbrand">
+                    <a href="#"></a>
+                </div>
+            </li>
+        </ul> -->
+                <ul class="mui-table-view mmb-brandtitle">
+                </ul>
+            </main>
+            <!-- 尾部开始 -->
+            <footer id="footer">
+                <div class="enter">
+                    <ul>
+                        <li>
+                            <a href="#">登录</a>
+                        </li>
+                        <li>
+                            <a href="#">注册</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp;返回顶部</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="download">
+                    <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+                    <p class="footer-link">m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- 尾部结束 -->
+    <!-- 品牌标题模板 -->
+    <script id="brandtitle" type="text/html">
+        {{each result value index}}
+        <li class="mui-table-view-cell" data-title="{{value.brandTitle}}" data-brand-title-id="{{value.brandTitleId}}">
+                <div class="mui-navigate-right">{{value.brandTitle}}</div>
+            </li>
+        {{/each}}
+            
+    </script>
+    <!-- 品牌标题对应的十大品牌模板 -->
+    <!-- <script id="getbrand" type="text/html">
+        {{each result value index}}
+        <p class="brand" data-brand-title-id="{{value.brandTitleId}}">
+            {{value.brandName}}
+        </p>
+        {{/each}}
+    </script> -->
+</body>
+
+</html>
+<!-- 引入 mui js -->
+<script src="../lib/mui/js/mui.min.js"></script>
+<!-- 引入 移动端jquery  -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入 模板引擎 js-->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入 首页 js -->
+<script src="../js/brandtitle.js"></script>
