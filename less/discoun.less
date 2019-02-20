@@ -1,0 +1,156 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// img {
+//     vertical-align: middle;
+// }
+// li {
+//     list-style: none;
+// }
+// a {
+//     text-decoration: none;
+//     color: #fff;
+// }
+// html {
+//     font-size: 26.66667vw;
+// }
+
+// //头部css
+// #header {
+//     height: .45rem;
+//     background: #ff4e49;
+//     display: flex;
+//     line-height: .45rem;
+//     text-align: center;
+//     .left {
+//         width: .5rem;
+//         a{
+//             display: block;
+//             height: .5rem;
+//             line-height: .5rem;
+//             width: .5rem;
+//             font-size: .24rem;
+//         }
+//     }
+//     .center {
+//         flex: 1;
+//         font-size: .14rem;
+//         color: #fff;
+//         font-weight: bold;
+
+//     }
+//     .right {
+//         width: .5rem;
+//         a {
+//             display: block;
+//             height: 100%;
+//             line-height: .25rem;
+//             padding: 0 .1rem;
+//             img {
+//                 width: 100%;
+//             }
+//         }
+//     }
+    
+// }
+
+// //底部css
+// #footer {
+//     height:1.74rem;
+//     background: #232a34;
+//     .enter {
+//         // padding-top: .13rem;
+//         ul {
+//             display: flex;
+//             li {
+//                 display: block;
+//                 float: left;
+//                a {
+//                 line-height: .34rem;
+//                 width: 1.2rem;
+//                 height: 2.18rem;
+//                 font-size: .14rem;
+//                }
+//             }
+//         }
+//     }
+//     .download{
+//         padding: .1rem 0;
+//         text-align: center;
+//         p{
+//             margin: 0;
+//             font-size: .14rem;
+//             line-height: .18rem;
+//             &:nth-child(1){
+//                 color: #000;
+//                 a{
+//                     color: red;
+//                 }
+//                 span{
+//                     color: #9d9d9d;
+//                 }
+//             }
+//         }
+       
+//     }
+// }
+
+@import 'base.less';
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+#main{
+    flex: 1;
+    height: 100%;
+}
+#header{
+    background: #ff4e49;
+    .right{
+        a{
+            line-height: .45rem;    
+        }
+    }
+}
+
+#main {
+    position: relative;
+    .discount-list{
+        display: flex;
+        flex-wrap: wrap;
+        .inland-discount-list {
+            background: #fff;
+            width: 50%;
+            box-sizing: border-box;
+            text-align: center;
+            padding:0 .1rem;
+            img {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+            .title {
+                text-align: left;
+                color: #232a34;
+                font-weight: bold;
+            }
+            .price {
+                text-align: left;
+                color: #ff6c52;
+            }
+            .info {
+                text-align: left;
+            }
+            
+        }
+    }
+   
+}
+
+#footer {
+    background: #232a34;
+}

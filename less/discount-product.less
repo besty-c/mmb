@@ -1,0 +1,193 @@
+@import 'base.less';
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    // 自适应
+    overflow: auto;
+
+}
+
+#header {
+    height: .45rem;
+    background: #ff4e49;
+
+    .right {
+        a {
+            line-height: .45rem;
+        }
+    }
+}
+
+
+
+
+// 主体部分
+#main {
+    background: #fff;
+
+    // 产品详情
+    .productDetails {
+        padding: 0.1rem;
+
+        h4 {
+            line-height: 0.25rem;
+        }
+
+        .price {
+            color: red;
+            line-height: 0.2rem;
+        }
+
+        .from {
+            font-size: .12rem;
+            color: #999999;
+        }
+
+        .mui-row {
+            .mui-col-xs-4 {
+                img {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+
+            .mui-col-xs-8 {
+                p {
+                    // line-height: .2rem;
+                }
+            }
+        }
+
+        .bgImg {
+            max-width: 1.7rem;
+        }
+
+        .but-buy {
+            margin-top: .3rem;
+            padding: 0 .1rem;
+
+            button {
+                width: 100%;
+                height: .3rem;
+                background: #ff9000;
+                color: #fff;
+                margin-bottom: .4rem;
+                text-align: center;
+                line-height: 0.3rem;
+                border-radius: 0.1rem;
+                padding: 0;
+            }
+        }
+    }
+
+    //二维码
+    .wechat {
+        padding: 0 .1rem;
+
+        // margin-top: .5rem;
+        img {
+            width: 100%;
+
+        }
+    }
+
+    //评论
+    .comment {
+        padding: .3rem .1rem 0 0.1rem;
+
+        p {
+            color: #232a34;
+            font-size: .14rem;
+            line-height: .2rem;
+        }
+
+        .discuss {
+            border: 1px solid #ccc;
+            position: relative;
+
+            textarea {
+                width: 100%;
+                height: .8rem;
+                border: 0;
+                //    outline: none;
+            }
+
+            .review {
+                position: relative;
+                background: #fbfbfb;
+
+                button {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ff841d;
+                    color: #fff;
+                }
+            }
+
+        }
+        .newcommons {
+            margin-top: .1rem;
+            font-size: .16rem;
+        }
+        .newComment{
+            li{
+                display: flex;
+                .newConmmentImg{
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .newCommentConent{
+                    flex:1;
+                    padding: 0 0.1rem;
+                    .newCommentInfo{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 0.14rem;
+                        .userName{
+                            color: skyblue;
+                        }
+                    }
+                    .newCommentDetails{
+                        margin-top: 0.08rem;
+                        font-size: 0.16rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#footer {
+    background: #232a34;
+    height: auto;
+
+    .enter {
+        padding-top: 0;
+
+        ul {
+            li {
+                line-height: .23rem;
+            }
+        }
+    }
+}
