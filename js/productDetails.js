@@ -82,7 +82,10 @@ $(function () {
             },
             success:function(obj){
                 obj = JSON.parse(obj);
-                // console.log(obj);
+                console.log(obj);
+                if(obj.result.length == 0){
+                    return;
+                }
                 var html = template('pingjiaTemp',{list:obj.result});
                 $('.evaluate').html(html);
             }
