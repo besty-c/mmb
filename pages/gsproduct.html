@@ -37,51 +37,56 @@
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
                 <!-- 导航栏 -->
-        <nav class="nav">
-                <div class="nav-title">
-                    <div class="nav-list">
-                        <ul class="nav-ul">
-                            <li class="shop">
-                                <span>京东</span>
-                                <i class="fa fa-angle-down"></i></li>
-                            <li class="eara"><span>华东</span><i class="fa fa-angle-down"></i></li>
-                            <li class="price">
-                                <span>全部价格</span>
-                                <i class="fa fa-angle-down"></i></li>
-    
+                <nav class="nav">
+                    <div class="nav-title">
+                        <div class="nav-list">
+                            <ul class="nav-ul">
+                                <li class="shop">
+                                    <span>京东</span>
+                                    <i class="fa fa-angle-down"></i></li>
+                                <li class="eara"><span>华东</span><i class="fa fa-angle-down"></i></li>
+                                <li class="price">
+                                    <span>全部价格</span>
+                                    <i class="fa fa-angle-down"></i></li>
+
+                            </ul>
+                        </div>
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <!-- 搜索条 -->
+                    <div class="search-content hide-search">
+                        <input type="text" placeholder="请输入商品内容"><span>搜索</span>
+                    </div>
+                    <div class="nav-content" style="display:none">
+                        <ul>
+
                         </ul>
                     </div>
-                    <div class="search">
-                        <i class="fa fa-search"></i>
+
+                </nav>
+
+                <!-- 商品列表 -->
+                <section class="product-list">
+                    <div class="mui-content">
+                        <ul class="mui-row product-ul">
+                            <li class="mui-col-xs-6">
+                                <a href="#">
+                                    <img src="../images/" alt="">
+                                    <p class="title"></p>
+                                    <div class="item">
+                                        <p class="price"></p>
+                                        <button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">去凑单</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="nav-content" style="display:none">
-                    <ul>
-    
-                    </ul>
-                </div>
-    
-            </nav>
-            <!-- 商品列表 -->
-            <section class="product-list">
-                <div class="mui-content">
-                    <ul class="mui-row product-ul">
-                        <li class="mui-col-xs-6">
-                            <a href="#">
-                                <img src="../images/" alt="">
-                                <p class="title"></p>
-                                <div class="item">
-                                    <p class="price"></p>
-                                    <button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">去凑单</button>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                </section>
             </div>
         </div>
-        
+
     </main>
     <!-- 底部 -->
     <footer id="footer">
@@ -107,6 +112,14 @@
             <p>m.manmanbuy.com</p>
         </div>
     </footer>
+    <div class="mask hide"></div>
+    <div class="circle">
+        <div class="ring"><a href="category.html" class="menuItem"></a> <a href="moneyctrl.html" class="menuItem"></a>
+            <a href="inlanddiscount.html" class="menuItem"></a> <a href="baicaijia.html" class="menuItem"></a> <a href="moneyctrl.html"
+                class="menuItem"></a> <a href="coupon.html" class="menuItem"></a> <a href="gsproduct.html" class="menuItem"></a>
+            <a href="../index.html" class="menuItem"></a></div>
+        <!-- <a href="##" class="center1"></a> -->
+    </div>
 </body>
 
 </html>
@@ -152,3 +165,4 @@
        {{ /each }}
 
 </script>
+<script src="../js/common.js"></script>

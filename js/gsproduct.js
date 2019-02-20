@@ -85,13 +85,11 @@ $(function () {
     })
 
 
-    //搜索的点击事件
-    // $('.search').on('tap', function () {
-    //     console.log(shopId, earaId);
-    //     getgsdetail();
-    //     $('.nav-content').hide();
+    // 搜索的点击事件
+    $('.search').on('tap', function () {
+        $('.search-content').toggleClass('hide-search')
         
-    // })
+    })
 
     getgsdetail();
     //发送商品列表请求

@@ -47,6 +47,7 @@ body {
                }
             }
         }
+        
         .nav-content {
             ul {
                 li {
@@ -63,6 +64,32 @@ body {
                     }
                 }
             }
+        }
+    }
+    .search-content {
+        display: flex;
+        padding: .1rem;
+        font-size: .14rem;
+        background-color: #eee;
+    
+        &.hide-search {
+            display: none;
+        }
+        input {
+            height: .3rem;
+            flex: 1;
+            font-size: .14rem;
+            margin-bottom: 0;
+        }
+    
+    
+        span {
+            height: .3rem;
+            width: 15%;
+            text-align: center;
+            line-height: .3rem;
+            margin-left: .1rem;
+            background-color: #ff841d;
         }
     }
     //商品列表
