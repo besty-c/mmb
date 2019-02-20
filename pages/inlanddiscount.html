@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入 首页 less -->
+    <link rel="stylesheet/less" href="../less/inlanddiscount.less">
+</head>
+<body>
+    <!-- 头部 开始 -->
+    <header id="header">
+        <div class="left">
+            <a href="javascript:history.back()">
+               <i class="mui-icon mui-icon-arrowleft"></i>
+            </a>
+        </div>
+        <div class="center">
+            国内折扣
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+
+
+    <!-- 主体 -->
+    <main id="main">
+        <ul class="list">
+           
+        </ul>
+
+
+    </main>
+    <!-- 尾部开始 -->
+    <footer id="footer">
+        <!-- <div class="rank">
+            <p>品牌排行</p>
+            <span class="fa fa-chevron-right"></span>
+        </div> -->
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                        <i class="fa fa-arrow-circle-up"></i>
+                    <a href="#header">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 尾部结束 -->
+</body>
+
+</html>
+
+<!-- 引入识别 less文件js -->
+<script src="../lib/less/less.js"></script>
+<!-- 引入 mui js -->
+<script src="../lib/mui/js/mui.min.js"></script>
+<!-- 引入 移动端jquery  -->
+<!-- 折扣列表 模板 -->
+<script type="text/html" id="discountlist">
+    {{each result value index}}
+        <li data-id="{{value.productId}}">
+            {{@value.productImg}}
+            <span class="text-1" >{{value.productName}}</span>
+            <p class="text-2">{{value.productPrice}}</p>
+            <span>{{value.productFrom}} | {{value.productTime}}</span>
+        </li>
+    {{/each}}
+</script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入 模板引擎 js-->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入 首页 js -->
+<script src="../js/inlanddiscount.js"></script>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买首页</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入 首页 less -->
+    <link rel="stylesheet/less" href="../less/register.less">
+</head>
+
+<body>
+    <!-- 头部 开始 -->
+    <header id="header">
+        <div class="left-img">
+            <a href="#">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+
+
+    <!-- 主体 -->
+    <main id="main">
+        <div class="surface">
+            <input type="text" data-name="用户名" placeholder="请输入用户名">
+            <input data-name="密码" class="mui-input-password" type="password" placeholder="密码(6-20个字符)">
+            <input data-name="手机号" type="text" placeholder="请输入手机号">
+            <div id="code">
+                <div class="num">
+                    5705
+                </div>
+                <input class="yanzma" data-name="验证码" type="text">
+                <button  id="btn1">获取手机验证码</button>
+            </div>
+            <input data-name="手机验证码" type="text" placeholder="请输入手机验证码">
+            <input data-name="邮箱" type="text" placeholder="请输入邮箱">
+            <button class="btn">注册</button>
+        </div>
+    </main>
+    <!-- 尾部开始 -->
+    <footer id="footer">
+
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                    <i class="fa fa-arrow-circle-up"></i>
+                    <a href="#header">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 尾部结束 -->
+</body>
+
+</html>
+<!-- 引入识别 less文件js -->
+<script src="../lib/less/less.js"></script>
+<!-- 引入 mui js -->
+<script src="../lib/mui/js/mui.min.js"></script>
+<!-- 引入 移动端jquery  -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入 模板引擎 js-->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入 首页 js -->
+<script src="../js/register.js"></script>

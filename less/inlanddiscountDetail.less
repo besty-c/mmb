@@ -1,0 +1,117 @@
+@import 'base.less';
+
+#main{
+    background-color: #fff;
+    padding: .1rem;
+    padding-bottom: .3rem;
+    div{
+        color:#4d4c4a;
+        font-size: .19rem;
+        padding-top: .15rem;
+        padding: .1rem;
+        padding-bottom: 0px;
+        font-weight: bold;
+        // font-weight: normal;
+    }
+    .goods{
+        ul{
+            // display: flex;
+            // flex-direction: column;
+            // flex-wrap: wrap;
+            padding: .1rem;
+            
+            width: 2.3rem;
+            li{
+                word-wrap: break-word;
+                word-break: normal;
+                &:nth-child(1){
+                    color: #ff6f25;
+                    font-weight: bold;
+                }
+                &:nth-child(2){
+                    color:#b2b1bc;
+                    font-size: .12rem;
+                    line-height: .5rem;
+                    white-space:nowrap;
+                }
+                &:nth-child(3){
+                    color: #606060;
+                    font-size: .14rem;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+  
+    .buy{
+        width: 100%;
+        background-color: #ff9000;
+        border-radius: .05rem;
+        color: #fff;
+        text-align: center;
+        height: .35rem;
+        line-height: .35rem;
+
+    }
+    .img{
+        margin-top: .3rem;
+        img{
+            width: 100%;
+        }
+    }
+    .discuss{
+        // .list {
+        //     display: flex;
+        //     img {
+        //         width: .5rem;
+        //     }   
+        //     .mui-media-body {
+        //         flex: 1;
+
+
+        //     }
+        // }
+        .list {
+            ul {
+                width: 100%;
+            }
+        }
+        p{
+            margin: 0;
+            line-height: .3rem;
+        }
+        .box{
+            input{
+                height: .8rem;
+                margin: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            .bottom-box{
+                padding: 0;
+                width: 100%;
+                position: relative;
+                border: .01rem solid #dfdfdf;
+                // border-bottom: .01rem solid #cccccc;
+                #btn{
+                    position: absolute;
+                    right: 0;
+                    width: .8rem;
+                    height: .3rem;
+                    font-size: .14rem;
+                    border:0;
+                    background-color: #ff841d;
+                    color: #fff;
+                    text-align: center;
+                    line-height: .3rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        .newest{
+            margin-top: .3rem;
+        }
+    }
+}

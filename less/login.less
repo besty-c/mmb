@@ -1,0 +1,93 @@
+@import "base.less";
+
+body{
+    background-color: #fff;
+}
+#main{
+    padding:.15rem .1rem .5rem .1rem;
+    
+    .login{
+        padding: .1rem;
+        box-shadow: .0rem .0rem .05rem .05rem #ccc;
+        .top-box{
+            width: 100%;
+            position: relative;
+            height:2.3rem;
+            
+            padding-top: .2rem;
+
+            >div{
+                background-color:#efefef;
+                width: 1.50rem;
+                height: 1.50rem;
+                border-radius: 50%;
+                text-align: center;
+                position:absolute;
+              
+                transform:translateX(-50%);
+                left: 50%;
+                >p{
+                    text-align: center;
+                    color: #ff4c89;
+                    padding-top: .15rem;
+                    font-size: .17rem;
+                }
+                
+                i{
+                    
+                    line-height: 1.5rem;
+                    font-size: 1.1rem;
+                    color: #ffa000;
+                }
+               
+                
+            }
+           
+        }
+       
+       
+        
+    }
+    .mui-input-group{
+        &:before{
+            height: 0px;
+        }
+        .password{
+            // margin-top: .2rem;
+            &::after{
+                height: 0px;
+            }
+        }
+        
+    }
+    .register{
+        padding-top: .1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: #ff4c89;
+            font-size: .12rem;
+        }
+    }
+    .affirm{
+        height: 1rem;
+        position: relative;
+        .btn{
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            background-color: #ff4e49;
+            transform:translate(-50%,50%);
+            // transform:translate(50%);
+            position: absolute;
+            left: 50%; 
+            bottom: 50%;
+            text-align: center;
+            line-height: .5rem;
+            i{
+                color: #fff;
+            }
+        }
+    }
+}
