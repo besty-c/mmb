@@ -12,7 +12,7 @@ $(function () {
         url: "http://localhost:9090/api/getbaicaijiatitle",
         dataType: "json",
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var html = template('nav-tml', {
                 list: data.result
             })
@@ -45,7 +45,7 @@ $(function () {
             },
             dataType: "json",
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 var html = template('goods-tml', {
                     list: data.result
                 })

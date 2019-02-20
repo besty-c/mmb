@@ -18,7 +18,7 @@ $(function () {
             $('body').removeClass('loadding')
         },
         success: function (obj) {
-            console.log(obj);
+            // console.log(obj);
             var html = template('listTemp', {
                 list: obj.result
             });
@@ -36,7 +36,7 @@ $(function () {
 
     function tapContent() {
         var id = $(that).data('id');
-        console.log(that);
+        // console.log(that);
         $.ajax({
             url: 'http://localhost:9090/api/getcategory',
             dataType: 'post',

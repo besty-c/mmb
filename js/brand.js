@@ -3,21 +3,21 @@ $(function(){
     var brandtitleid = getQueryString('brandtitleid')
     // 获取brandtitle
     var brandtitle = getQueryString('brandtitle')
-    console.log(brandtitleid);
+    // console.log(brandtitleid);
     $.ajax({
         url:'http://47.52.242.30:9090/api/getbrand',
         data:{
             brandtitleid:brandtitleid,
         },
         success:function(result){
-            console.log(result);
+            // console.log(result);
             var html = template('getbrand',result)
             $('#main .ultop').html(html)
         }
     })
     // 截取字符串
     brandtitle = brandtitle.slice(0,4)
-    console.log(brandtitle);
+    // console.log(brandtitle);
     $('#main .title span').html(brandtitle)
 
     // 注册点击事件
@@ -25,7 +25,7 @@ $(function(){
         var $this = $(this)
         var dataTitleId = $this.data('brand-title-id')
         var brandName = $this.data('brand-name')
-        console.log(dataTitleId);
+        // console.log(dataTitleId);
         location='brandproductlist.html?dataTitleId='+dataTitleId+'&brandName='+brandName
     })
 

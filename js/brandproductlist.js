@@ -14,7 +14,7 @@ $(function () {
                 pagesize: 4 * count
             },
             success: function (result) {
-                console.log(result);
+                // console.log(result);
                 var html = template('brandproductlist', result)
                 $('#main .ranklist').html(html)
             }
@@ -24,7 +24,7 @@ $(function () {
         var num = 1;
     $('#main .more').on('tap',function(){
         num++;
-        console.log(num);
+        // console.log(num);
         getBrandProductList(num)
 
     })

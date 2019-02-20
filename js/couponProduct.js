@@ -2,7 +2,7 @@ $(function () {
 
     getQueryString('couponid');
     var couponid = getQueryString('couponid');
-    console.log(couponid);
+    // console.log(couponid);
 
 
     $.ajax({
@@ -11,7 +11,7 @@ $(function () {
             'couponid': couponid
         },
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var html = template('couponProduct', data);
             $('.mui-row').html(html);
         }
@@ -25,7 +25,7 @@ $(function () {
         },
         dataType: 'json',
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var html = template('slide', data);
             $('.mui-backdrop').html(html);
         }

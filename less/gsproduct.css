@@ -258,18 +258,8 @@ a {
   z-index: 1001;
   animation: fa-spin 1s infinite linear;
 }
-html,
-body {
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-}
 .main {
-  flex: 1;
   position: relative;
-  overflow: hidden;
 }
 .main .nav {
   background-color: #fff;
