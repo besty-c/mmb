@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../less/sitenav.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <a href="../index.html" class="fa fa-angle-left"></a>
+            <!-- <a href="javascript:void(0)">
+                <img src="../images/header_logo.png" alt="">
+            </a> -->
+        </div>
+        <div class="center">商城导航</div>
+        <div class="right">
+            <a href="javascript:void(0)">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="container">
+            <div class="list-group link">
+
+            </div>
+        </section>
+        <div class="footnav">
+            <span>
+                <a href="../index.html">首页</a> 
+                <span href="#">> 商城导航</span>
+            </span>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                    <a href="#">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script id="sb" type="text/html">
+        {{each result value index}}
+        <a class="list-group-item link-list" href = "{{value.navHref}}">
+            <img src="{{value.navImg}}" alt="">
+            <span>{{value.navTitle}}</span>
+        </a>
+    {{/each}}
+</script>
+</body>
+</html>
+<script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+<script src="../js/lazyFade.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/sitenav.js"></script>
