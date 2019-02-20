@@ -127,7 +127,7 @@
 <!-- 推荐 模板 -->
 <script type="text/html" id="reco">
     {{each result value index}}
-    <div class="mui-card-header mui-card-media recommend-ations">
+    <div class="mui-card-header mui-card-media recommend-ations box" data-id="{{value.productId}}">
         {{@value.productImgSm}}
         <div class="mui-media-body">
             {{value.productName}}

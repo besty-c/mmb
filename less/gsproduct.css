@@ -18,7 +18,7 @@ html {
 #header {
   display: flex;
   height: .45rem;
-  line-height: 45px;
+  line-height: .45rem;
   background-color: #ff841d;
   text-align: center;
 }
@@ -102,6 +102,9 @@ html {
 }
 #footer .enter ul li:nth-child(3) {
   flex: 1;
+}
+#footer .enter ul li i {
+  color: #747474;
 }
 #footer .enter ul li a {
   font-size: .13rem;

@@ -79,17 +79,19 @@ $(function () {
             $('.nav-title .eara i').toggleClass('fa-angle-down');
             $('.nav-title .eara i').toggleClass('fa-angle-up');
         }
+        getgsdetail();
+        $('.nav-content').hide();
 
     })
 
 
     //搜索的点击事件
-    $('.search').on('tap', function () {
-        console.log(shopId, earaId);
-        getgsdetail();
-        $('.nav-content').hide();
+    // $('.search').on('tap', function () {
+    //     console.log(shopId, earaId);
+    //     getgsdetail();
+    //     $('.nav-content').hide();
         
-    })
+    // })
 
     getgsdetail();
     //发送商品列表请求
