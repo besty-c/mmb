@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+html {
+  font-size: 26.66667vw;
+}
+#header {
+  display: flex;
+  height: .45rem;
+  line-height: .45rem;
+  background-color: #ff841d;
+  text-align: center;
+}
+#header .left {
+  width: .5rem;
+}
+#header .left a {
+  display: block;
+  line-height: .45rem;
+  padding: 0 .1rem;
+}
+#header .left a::before {
+  font-size: .3rem;
+  color: #fff;
+}
+#header .left-img {
+  width: 2rem;
+  padding: 0 .1rem;
+}
+#header .left-img a {
+  display: block;
+}
+#header .left-img a img {
+  width: 100%;
+}
+#header .center {
+  flex: 1;
+  color: #fff;
+  line-height: .45rem;
+  text-align: center;
+}
+#header .right {
+  width: .5rem;
+}
+#header .right a {
+  display: block;
+  height: 100%;
+  padding: 0 .1rem;
+  line-height: .45rem;
+}
+#header .right a img {
+  width: 100%;
+}
+#footer {
+  height: 1.74rem;
+}
+#footer .rank {
+  background-color: #ff9711;
+  display: flex;
+  line-height: .35rem;
+  justify-content: space-between;
+}
+#footer .rank p {
+  margin: 0;
+  font-size: .14rem;
+  color: #fff;
+  padding-left: .1rem;
+}
+#footer .rank span {
+  line-height: .35rem;
+  color: #fff;
+  padding-right: .1rem;
+  font-size: .14rem;
+}
+#footer .enter {
+  padding-top: .3rem;
+}
+#footer .enter ul {
+  display: flex;
+  border-top: .02rem solid #ccc;
+  border-bottom: .02rem solid #ccc;
+}
+#footer .enter ul li {
+  line-height: .45rem;
+  text-align: center;
+  width: 1.2rem;
+}
+#footer .enter ul li:nth-child(1),
+#footer .enter ul li:nth-child(2) {
+  border-right: .02rem solid #ccc;
+}
+#footer .enter ul li:nth-child(3) {
+  flex: 1;
+}
+#footer .enter ul li i {
+  color: #747474;
+}
+#footer .enter ul li a {
+  font-size: .13rem;
+  color: #747474;
+}
+#footer .download {
+  padding: .1rem 0;
+  text-align: center;
+}
+#footer .download p {
+  margin: 0;
+  font-size: .14rem;
+  line-height: .18rem;
+}
+#footer .download p:nth-child(1) {
+  color: #000;
+}
+#footer .download p:nth-child(1) a {
+  color: red;
+}
+#footer .download p:nth-child(1) span {
+  color: #9d9d9d;
+}
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #eee;
+  font-size: .14rem;
+}
+#nav {
+  height: 0.43rem;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: .1rem;
+}
+#nav .scroll-nav {
+  height: 100%;
+}
+#nav .scroll-nav .mui-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+#nav .scroll-nav .mui-scroll .nav-category li {
+  float: left;
+  padding: .10rem .15rem;
+  font-size: .15rem;
+  height: 0.43rem;
+  line-height: 0.23rem;
+}
+#nav .scroll-nav .mui-scroll .nav-category li.active {
+  border-bottom: 2px solid red;
+  color: red;
+}
+#nav .search-btn {
+  position: absolute;
+  width: 0.3rem;
+  text-align: center;
+  line-height: .43rem;
+  color: #666;
+  right: 0;
+  top: 0;
+  background-color: #eee;
+  border: none;
+  z-index: 10;
+}
+.search {
+  display: flex;
+  padding: .1rem;
+  font-size: .14rem;
+  background-color: #eee;
+}
+.search input {
+  height: .3rem;
+  flex: 1;
+  font-size: .14rem;
+  margin-bottom: 0;
+}
+.search span {
+  height: .3rem;
+  width: 15%;
+  text-align: center;
+  line-height: .3rem;
+  margin-left: .1rem;
+  background-color: #ff841d;
+}
+#main {
+  flex: 1;
+  position: relative;
+}
+#main .mui-scroll-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li {
+  padding: .1rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li::after {
+  left: 0;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div {
+  display: flex;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div img {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .1rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body {
+  flex: 1;
+  height: 1.5rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body > div {
+  margin: .15rem 0;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .title {
+  height: 0.2rem;
+  overflow: hidden;
+  /*超出部分隐藏*/
+  white-space: nowrap;
+  /*不换行*/
+  text-overflow: ellipsis;
+  /*超出部分省略号显示*/
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .price {
+  color: red;
+  font-size: .18rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .price del,
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .price i {
+  font-size: .12rem;
+  font-style: normal;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .price i {
+  margin-right: .05rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .price del {
+  color: #666;
+  margin-left: .05rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .bar {
+  color: #ff5e5d;
+  height: 0.14rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .bar i {
+  width: 1rem;
+  height: .15rem;
+  display: inline-block;
+  border-radius: .1rem;
+  overflow: hidden;
+  background-color: #ffb7b7;
+  position: relative;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .bar i em {
+  display: inline-block;
+  background-color: #ff5e5d;
+  height: 100%;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .bar i span {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .links a {
+  color: red;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .links a:nth-of-type(1) {
+  border: 1px dotted red;
+  padding: .05rem;
+}
+#main .mui-scroll-wrapper .mui-scroll .goods-view li > div .mui-media-body .links a:nth-of-type(2) {
+  background-color: #ff5e5d;
+  padding: .05rem;
+  color: #fff;
+}
+.btn-backTop {
+  position: fixed;
+  width: 0.5rem;
+  height: 0.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.5rem;
+  bottom: .3rem;
+  right: 0.1rem;
+  background-color: #000;
+  border-radius: .25rem;
+  font-size: .25rem;
+  z-index: 20;
+  opacity: .2;
+}
