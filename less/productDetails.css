@@ -15,51 +15,48 @@ a {
 html {
   font-size: 26.66667vw;
 }
-#header {
+.header {
   display: flex;
   height: .45rem;
-  line-height: .45rem;
+  line-height: 45px;
   background-color: #ff841d;
   text-align: center;
 }
-#header .left {
+.header .left {
   width: .5rem;
 }
-#header .left a {
+.header .left a {
   display: block;
   line-height: .45rem;
   padding: 0 .1rem;
 }
-#header .left a::before {
+.header .left a::before {
   font-size: .3rem;
   color: #fff;
 }
-#header .left-img {
+.header .left-img {
   width: 2rem;
   padding: 0 .1rem;
 }
-#header .left-img a {
+.header .left-img a {
   display: block;
 }
-#header .left-img a img {
+.header .left-img a img {
   width: 100%;
 }
-#header .center {
+.header .center {
   flex: 1;
   color: #fff;
-  line-height: .45rem;
-  text-align: center;
 }
-#header .right {
+.header .right {
   width: .5rem;
 }
-#header .right a {
+.header .right a {
   display: block;
   height: 100%;
   padding: 0 .1rem;
-  line-height: .45rem;
 }
-#header .right a img {
+.header .right a img {
   width: 100%;
 }
 #footer {
@@ -103,9 +100,6 @@ html {
 #footer .enter ul li:nth-child(3) {
   flex: 1;
 }
-#footer .enter ul li i {
-  color: #747474;
-}
 #footer .enter ul li a {
   font-size: .13rem;
   color: #747474;
@@ -126,6 +120,200 @@ html {
   color: red;
 }
 #footer .download p:nth-child(1) span {
+  color: #9d9d9d;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.nav {
+  width: 100%;
+  height: 0.4rem;
+  padding: 0.05rem 0.2rem;
+  background: linear-gradient(to bottom, #fff, #ddd);
+  line-height: 0.4rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 -0.01rem 0.03rem #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+.nav .nav-tittle {
+  line-height: 0.29rem;
+}
+.nav a {
+  font-size: 0.14rem;
+  color: #333;
+}
+.nav > a {
+  border-radius: 6px;
+  box-shadow: 0 0.02rem 0.01rem 0 #ccc;
+  padding: 0.05rem;
+  line-height: 0.19rem;
+  background: linear-gradient(to top, #fff, #ddd);
+}
+#main {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: scroll;
+}
+#main .details-img {
+  background-color: #fff;
+  padding: .2rem;
+  text-align: center;
+}
+#main .details-img p {
+  color: #333;
+  text-align: left;
+  font-size: .14rem;
+  margin-bottom: 0;
+}
+#main .details-img img:nth-of-type(1) {
+  width: 1.7rem;
+}
+#main .details-img img:nth-of-type(2) {
+  width: .5rem;
+  vertical-align: bottom;
+}
+#main .nav-details {
+  display: flex;
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+#main .nav-details > div {
+  flex: 1;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  color: #fff;
+  font-size: .14rem;
+}
+#main .nav-details > div:nth-of-type(n+2) {
+  border-left: 1px solid #c14d00;
+}
+#main .nav-details > div:nth-of-type(1) {
+  background-color: #ffa025;
+}
+#main .nav-details > div:nth-of-type(2) {
+  background-color: #ffc627;
+}
+#main .nav-details > div:nth-of-type(3) {
+  background-color: #ffc525;
+}
+#main .price-details {
+  padding: .1rem;
+  background-color: #fff;
+}
+#main .price-details td {
+  font-size: 16px;
+}
+#main .price-details td > a {
+  color: #333;
+}
+#main .price-details td.red {
+  color: red;
+  text-align: right;
+}
+#main .price-tip {
+  line-height: .17rem;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+  border-bottom: 3px solid #aaa;
+  color: #888888;
+}
+#main .content > p {
+  color: #333;
+  height: .4rem;
+  line-height: .4rem;
+  background: #ccc;
+  margin-top: .01rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+#main .content .evaluate .pingjia-content {
+  padding: .1rem;
+  background-color: #fff;
+  font-size: .13rem;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+}
+#main .content .evaluate .pingjia-content .date {
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+#main .content .evaluate .pingjia-content .star {
+  display: flex;
+  justify-content: space-between;
+  margin: .07rem 0;
+}
+#main .content .evaluate .pingjia-content .star .starImg img {
+  width: 18px;
+  height: 18px;
+}
+#main .content .evaluate .pingjia-content .pingjia {
+  font-size: .13rem;
+  color: #333;
+  line-height: .22rem;
+}
+#main .more {
+  text-align: center;
+  padding: .07rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#main .more button {
+  line-height: .18rem;
+}
+#main .recommend-bg {
+  background-color: #eee;
+  padding-bottom: .1rem;
+  margin-top: .05rem;
+}
+#main .recommend-bg .recommend {
+  background-color: #ff9711;
+  display: flex;
+  line-height: .35rem;
+  justify-content: space-between;
+}
+#main .recommend-bg .recommend p {
+  margin: 0;
+  font-size: .14rem;
+  color: #fff;
+  padding-left: .1rem;
+}
+#main .recommend-bg .recommend span {
+  line-height: .35rem;
+  color: #fff;
+  padding-right: .1rem;
+  font-size: .14rem;
+}
+#footer {
+  background-color: #333;
+  height: auto;
+}
+#footer .enter {
+  padding-top: 0;
+}
+#footer .enter ul {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#footer .enter ul li > a {
+  color: #fff;
+}
+#footer .download p:nth-child(1) {
   color: #9d9d9d;
 }
 a {

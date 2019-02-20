@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="../less/productDetails.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/fastclick.js"></script>
+    <script src="../js/productDetails.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-img">
+            <a href="#">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <div class="nav">
+
+    </div>
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="detailsInfo">
+                    <section class="details-img">
+                        <p>奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调</p>
+                        <img src="../images/Thumb_2014120015214690353.jpg" alt="">
+                        <img src="../images/sc.jpg" alt="">
+                    </section>
+                    <section class="nav-details">
+                        <div>比价购买</div>
+                        <div>比价购买</div>
+                        <div>比价购买</div>
+                    </section>
+                    <section class="price-details">
+
+                    </section>
+                </div>
+                <section class="price-tip">
+                    * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+                </section>
+                <section class="content">
+                    <p>网友评价</p>
+                    <div class="evaluate">
+
+                    </div>
+                </section>
+                <section class="more">
+                    <button type="button" class="mui-btn">查看更多评价</button>
+                </section>
+                <section class="recommend-bg">
+                    <div class="recommend">
+                        <p>品牌排行</p>
+                        <span class="fa fa-chevron-right"></span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                    <a href="#" class="btn-top">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <div class="mask hide"></div>
+    <div class="circle">
+        <div class="ring"><a href="category.html" class="menuItem"></a> <a href="moneyctrl.html" class="menuItem"></a>
+            <a href="inlanddiscount.html" class="menuItem"></a> <a href="baicaijia.html" class="menuItem"></a> <a href="moneyctrl.html"
+                class="menuItem"></a> <a href="coupon.html" class="menuItem"></a> <a href="gsproduct.html" class="menuItem"></a>
+            <a href="../index.html" class="menuItem"></a></div>
+            <!-- <a href="##" class="center1"></a> -->
+    </div>
+    
+    <script type="text/html" id="cateTemp">
+        <div class="nav-tittle">
+            <a href="../index.html">首页 ></a>
+            <a href="category.html">全部分类 ></a>
+            <a href="productList.html?categoryid={{categoryId}}&category={{category}}" class="categoryName"> {{category}}</a>
+        </div>
+        <a href="#">筛选</a>
+    </script>
+
+    <script type="text/html" id="pingjiaInfo">
+        <section class="details-img">
+            <p>{{productName}}</p>
+            {{@productImg}}
+            <img src="../images/sc.jpg" alt="">
+        </section>
+        <section class="nav-details">
+            <div>比价购买</div>
+            <div>比价购买</div>
+            <div>比价购买</div>
+        </section>
+        <section class="price-details">
+            {{@bjShop}}
+        </section>
+    </script>
+
+    <script type="text/html" id="pingjiaTemp">
+        {{each list value}}
+        <div class="pingjia-content">
+            <div class="date">
+                <span>{{value.comName}}</span>
+                <span>{{value.comTime}}</span>
+            </div>
+            <div class="star">
+                <div class="starImg">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                    <img src="../images/star.svg" alt="">
+                </div>
+                <div class="taobao">
+                    {{value.comFrom}}
+                </div>
+            </div>
+            <p class="pingjia">{{value.comContent}}</p>
+        </div>
+        {{/each}}
+    </script>
+</body>
+<script src="../js/common.js"></script>
+</html>
