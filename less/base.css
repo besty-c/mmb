@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+html {
+  font-size: 26.66667vw;
+}
+#header {
+  display: flex;
+  height: .45rem;
+  line-height: .45rem;
+  background-color: #ff841d;
+  text-align: center;
+}
+#header .left {
+  width: .5rem;
+}
+#header .left a {
+  display: block;
+  line-height: .45rem;
+  padding: 0 .1rem;
+}
+#header .left a::before {
+  font-size: .3rem;
+  color: #fff;
+}
+#header .left-img {
+  width: 2rem;
+  padding: 0 .1rem;
+}
+#header .left-img a {
+  display: block;
+}
+#header .left-img a img {
+  width: 100%;
+}
+#header .center {
+  flex: 1;
+  color: #fff;
+  line-height: .45rem;
+  text-align: center;
+}
+#header .right {
+  width: .5rem;
+}
+#header .right a {
+  display: block;
+  height: 100%;
+  padding: 0 .1rem;
+  line-height: .45rem;
+}
+#header .right a img {
+  width: 100%;
+}
+#footer {
+  height: 1.74rem;
+}
+#footer .rank {
+  background-color: #ff9711;
+  display: flex;
+  line-height: .35rem;
+  justify-content: space-between;
+}
+#footer .rank p {
+  margin: 0;
+  font-size: .14rem;
+  color: #fff;
+  padding-left: .1rem;
+}
+#footer .rank span {
+  line-height: .35rem;
+  color: #fff;
+  padding-right: .1rem;
+  font-size: .14rem;
+}
+#footer .enter {
+  padding-top: .3rem;
+}
+#footer .enter ul {
+  display: flex;
+  border-top: .02rem solid #ccc;
+  border-bottom: .02rem solid #ccc;
+}
+#footer .enter ul li {
+  line-height: .45rem;
+  text-align: center;
+  width: 1.2rem;
+}
+#footer .enter ul li:nth-child(1),
+#footer .enter ul li:nth-child(2) {
+  border-right: .02rem solid #ccc;
+}
+#footer .enter ul li:nth-child(3) {
+  flex: 1;
+}
+#footer .enter ul li i {
+  color: #747474;
+}
+#footer .enter ul li a {
+  font-size: .13rem;
+  color: #747474;
+}
+#footer .download {
+  padding: .1rem 0;
+  text-align: center;
+}
+#footer .download p {
+  margin: 0;
+  font-size: .14rem;
+  line-height: .18rem;
+}
+#footer .download p:nth-child(1) {
+  color: #000;
+}
+#footer .download p:nth-child(1) a {
+  color: red;
+}
+#footer .download p:nth-child(1) span {
+  color: #9d9d9d;
+}

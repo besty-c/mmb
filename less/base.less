@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    vertical-align: middle;
+}
+li {
+    list-style: none;
+
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+html {
+    font-size: 26.66667vw;
+}
+
+
+// 头部css
+#header {
+    display: flex;
+    height: .45rem;
+    line-height: .45rem;
+    background-color: #ff841d;
+    text-align: center;
+   .left {
+       width: .5rem;
+       a {
+           display: block;
+           line-height: .45rem;
+           padding: 0 .1rem;
+           &::before {
+               font-size: .3rem;
+               color: #fff;
+           }
+       }
+   } 
+   .left-img {
+       width: 2rem;
+       padding: 0 .1rem;
+       a {
+           display: block;
+           img {
+               width: 100%;
+           }
+       }
+   }
+   .center {
+       flex: 1;
+       color: #fff;
+       line-height: .45rem;
+       text-align: center;
+   }
+   .right {
+       width: .5rem;
+       a {
+           display: block;
+           height: 100%;
+           padding: 0 .1rem;
+           line-height: .45rem;
+           img {
+               width: 100%;
+           }
+       }
+   }
+}
+
+// 底部
+#footer{
+    height:1.74rem;
+    .rank{
+        background-color: #ff9711;
+        display: flex;
+        line-height: .35rem;
+        justify-content:space-between;
+        p{
+            margin: 0; 
+            font-size: .14rem;
+            color: #fff;
+            padding-left: .1rem;
+        }
+        span{
+            line-height: .35rem;
+            color: #fff;
+            padding-right: .1rem;
+            font-size: .14rem;
+        }
+    }
+    .enter{
+        padding-top: .3rem;
+          ul{
+            display: flex;
+            // justify-content: space-around;
+            border-top: .02rem solid #ccc;
+            border-bottom: .02rem solid #ccc;
+              li{
+                  line-height: .45rem;
+                  text-align: center;
+                  width: 1.2rem;
+                  &:nth-child(1),
+                  &:nth-child(2){
+                    border-right: .02rem solid #ccc;
+                }
+                  &:nth-child(3){
+                      flex: 1;
+                  }
+                  i{
+                      color:#747474;
+                  }
+                  a{
+                      font-size: .13rem;
+                      color: #747474;
+                  }
+              }
+          }
+    }
+    .download{
+        padding: .1rem 0;
+        text-align: center;
+        p{
+            margin: 0;
+            font-size: .14rem;
+            line-height: .18rem;
+            &:nth-child(1){
+                color: #000;
+                a{
+                    color: red;
+                }
+                span{
+                    color: #9d9d9d;
+                }
+            }
+        }
+       
+    }
+}

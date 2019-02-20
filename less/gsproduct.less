@@ -1,0 +1,99 @@
+@import './base.less';
+// 主体css
+html,body {
+    height: 100%;
+}
+body {
+    display: flex;
+    //改变主轴方向
+    flex-direction: column;
+}
+.main {
+    // height: 5rem;
+    // flex: 1;
+    flex:1;
+    position: relative; 
+    overflow: hidden;
+    // 导航栏
+    .nav {
+        background-color: #fff;
+        .nav-title {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            .nav-list {
+                flex:1;
+                height: .3rem;
+                line-height: .3rem;
+                text-align: center;
+                .nav-ul {
+                    display: flex;
+                    li {
+                        flex: 1;
+                        font-size: .14rem;
+                        i {
+                            padding-left: .03rem;
+                        }
+                       
+                    }
+                }
+            }
+            .search {
+                border-left: 1px solid #ccc;
+                width: .5rem;
+                line-height: .3rem;
+                text-align: center;
+               .fa-search {
+                    font-size: .2rem;
+               }
+            }
+        }
+        .nav-content {
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 .2rem;
+                    height: .3rem;
+                    line-height: .3rem;
+                    border-bottom: 1px solid #ccc;
+                    font-size: .14rem;
+                    .font {
+                        line-height: .3rem;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+    //商品列表
+    .product-list {
+        .product-ul {
+            padding: .2rem 0;
+            li {
+                box-sizing: border-box;
+                margin-bottom: .05rem;
+                a {
+                    background-color: #fff;
+                    margin: 0 .1rem;
+                    display: block;
+                    border: 1px solid #ccc;
+                    padding: 0 .1rem .05rem;
+                    img {
+                        width: 100%;
+                        
+                    }
+                    .title {
+                        
+                    }
+                    .price {
+                        color: red;
+                        font-size: 15px;
+                    }
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

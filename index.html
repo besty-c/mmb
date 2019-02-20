@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买首页</title>
+    <!-- 引入 mui框架 css -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入 字体图标 css -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入 首页 less -->
+    <link rel="stylesheet/less" href="./less/index.less">
+</head>
+<body>
+    <!-- 头部 开始 -->
+    <header id="header">
+        <div class="left-img">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+
+    <!-- 搜索框 开始 -->
+    <section class="search">
+        <input type="text" placeholder="请输入商品内容"><span>搜索</span>
+    </section>
+    <!-- 搜索框 结束 -->
+
+    <!-- 主体 -->
+    <main id="main">
+        <!-- 轮播图 开始 -->
+        <section>
+            <div class="mui-slider slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner05.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner01.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner02.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner03.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner04.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="./images/banner05.jpg" /></a></div>
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner01.jpg" /></a></div>
+                </div>
+                <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+            </div>
+        </section>
+        <!-- 轮播图 结束 -->
+        <!-- 导航栏开始 -->
+        <nav class="nav">
+            <ul class="content">
+
+            </ul>
+
+        </nav>
+        <!-- 导航栏结束 -->
+        <!-- 推荐 开始 -->
+        <section class="recommend">
+            <p>超值折扣推荐</p>
+            <span class="fa fa-chevron-right"></span>
+        </section>
+        <!-- 推荐 结束 -->
+        <!-- 推荐内容开始 -->
+        <section class="discount">
+
+        </section>
+        <!-- 推荐内容结束 -->
+    </main>
+    <!-- 尾部开始 -->
+    <footer id="footer">
+        <div class="rank">
+            <p>品牌排行</p>
+            <span class="fa fa-chevron-right"></span>
+        </div>
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                        <i class="fa fa-arrow-circle-up"></i>
+                    <a href="#header">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 尾部结束 -->
+</body>
+
+</html>
+<!-- 导航栏模板 -->
+<script type="text/html" id="nav">
+    {{each result value index}}
+        <li id="number{{index}}">
+           <a href="pages/{{value.titlehref}}">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+           </a>
+        </li>
+    {{/each}}
+</script>
+<!-- 推荐 模板 -->
+<script type="text/html" id="reco">
+    {{each result value index}}
+    <div class="mui-card-header mui-card-media recommend-ations">
+        {{@value.productImgSm}}
+        <div class="mui-media-body">
+            {{value.productName}}
+           <div class="text">
+                <p>{{value.productFrom}}　|{{value.productTime}}</p>
+                <p class="mui-icon mui-icon-chat">{{value.productComCount}}</p>
+           </div>
+        </div>
+    </div>
+    {{/each}}
+
+</script>
+<!-- 引入识别 less文件js -->
+<script src="./lib/less/less.js"></script>
+<!-- 引入 mui js -->
+<script src="./lib/mui/js/mui.min.js"></script>
+<!-- 引入 移动端jquery  -->
+<script src="./lib/zepto/zepto.min.js"></script>
+<!-- 引入 模板引擎 js-->
+<script src="./lib/artTemplate/template-web.js"></script>
+<!-- 引入 首页 js -->
+<script src="./js/index.js"></script>
