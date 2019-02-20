@@ -168,3 +168,20 @@ h4 {
   color: #ccc;
   padding: .2rem;
 }
+.mui-backdrop .top {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: .3rem;
+}
+.mui-backdrop .mui-slider {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mui-backdrop .mui-slider img {
+  width: 100%;
+}
