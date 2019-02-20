@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价搜索</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="../less/category.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/fastclick.js"></script>
+    <script src="../js/category.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-img">
+            <a href="#">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部 结束  -->
+    <!-- 搜索框 开始 -->
+    <section class="search">
+        <form class="mui-input-group">
+            <div class="mui-input-row search-input">
+                <input type="text" class="mui-input-clear" placeholder="请输入商品内容">
+            </div>
+            <span class="btn-search">搜索</span>
+        </form>
+    </section>
+    <!-- 搜索框 结束 -->
+    <!-- 主体 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <section class="list">
+                    <ul class="mui-table-view list-table">
+
+                    </ul>
+                </section>
+                <section class="recommend-bg">
+                    <div class="recommend">
+                        <p>品牌排行</p>
+                        <span class="fa fa-chevron-right"></span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!-- 尾部开始 -->
+    <footer id="footer">
+        <div class="enter">
+            <ul>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+                <li>
+                    <a href="#" class="btn-top">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="download">
+            <p><a href="#">手机APP下载</a>　慢慢买手机版<span>--掌上比价平台</span> </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <div class="mask hide"></div>
+    <div class="circle">
+        <div class="ring"><a href="category.html" class="menuItem"></a> <a href="moneyctrl.html" class="menuItem"></a>
+            <a href="inlanddiscount.html" class="menuItem"></a> <a href="baicaijia.html" class="menuItem"></a> <a href="moneyctrl.html"
+                class="menuItem"></a> <a href="coupon.html" class="menuItem"></a> <a href="gsproduct.html" class="menuItem"></a>
+            <a href="../index.html" class="menuItem"></a></div>
+            <!-- <a href="##" class="center1"></a> -->
+    </div>
+</body>
+<script type="text/html" id="listTemp">
+    {{each list value}}
+        <li class="mui-table-view-cell mui-collapse" data-id="{{value.titleId}}">
+            <a class="mui-navigate-right" href="javascript:void(0)">{{value.title}}</a>
+            <div class="mui-collapse-content">
+                <div class="tap-content">
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+<script type="text/html" id="tapTemp">
+    {{each list value}}
+    <a href="productList.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a>
+    {{/each}}
+</script>
+<script src="../js/common.js"></script>
+</html>

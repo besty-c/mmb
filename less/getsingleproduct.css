@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+html {
+  font-size: 26.66667vw;
+}
+.header {
+  display: flex;
+  height: .45rem;
+  line-height: 45px;
+  background-color: #ff841d;
+  text-align: center;
+}
+.header .left {
+  width: .5rem;
+}
+.header .left a {
+  display: block;
+  line-height: .45rem;
+  padding: 0 .1rem;
+}
+.header .left a::before {
+  font-size: .3rem;
+  color: #fff;
+}
+.header .left a img {
+  width: 500%;
+}
+.header .center {
+  flex: 1;
+  color: #fff;
+}
+.header .right {
+  width: .5rem;
+}
+.header .right a {
+  display: block;
+  height: 100%;
+  padding: 0 .1rem;
+}
+.header .right a img {
+  width: 100%;
+}
