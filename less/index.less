@@ -1,0 +1,151 @@
+@import 'base.less';
+
+// 搜索框 开始
+.search {
+    display: flex;
+    padding: .1rem;
+    background-color: #fff;
+
+    input {
+        border: none;
+        width: 80%;
+        height: .35rem;
+        margin: 0;
+        border-radius: .5rem;
+        background-color: #f1f1f1;
+        font-size: .13rem;
+    }
+
+    span {
+        flex: 1;
+        margin-left: .05rem;
+        border-radius: .5rem;
+        background-color: #ff841d;
+        color: #fff;
+        text-align: center;
+        line-height: .35rem;
+        font-size: .13rem;
+    }
+}
+// 搜索框 结束
+
+
+#main {
+    background-color: #f1f1f1;
+    // 轮播图开始
+    .slider{
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    // 轮播图 结束
+
+// 导航栏开始
+    .nav {
+        margin-top: .1rem;
+        margin-bottom: .07rem;
+
+        ul {
+            padding-top: .1rem;
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            li {
+                width: 25%;
+               
+
+                &:nth-child(9),
+                &:nth-child(10),
+                &:nth-child(11),
+                &:nth-child(12) {
+                    
+                    display: none;
+                }
+                &.hide{
+                    display: block;
+                }
+                
+
+
+                a {
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+// 导航栏结束
+// 推荐 开始
+    .recommend {
+        background-color: #ff9711;
+        display: flex;
+        line-height: .35rem;
+        justify-content: space-between;
+
+        p {
+            margin: 0;
+            font-size: .14rem;
+            color: #fff;
+            padding-left: .1rem;
+        }
+
+        span {
+            line-height: .35rem;
+            color: #fff;
+            padding-right: .1rem;
+            font-size: .14rem;
+        }
+    }
+// 推荐 结束
+// 推荐内容开始
+   .discount{
+       background-color: #fff;
+    .recommend-ations {
+        padding:.25rem;
+        img{
+            width:.7rem;
+            height: .63rem;
+        }
+        .text{
+            margin-top: .1rem;
+            display: flex;
+            justify-content: space-between;
+            line-height: .3rem;
+            p{
+                &:nth-child(2){
+                    line-height:.3rem;
+                   
+                }
+            }
+        }
+    }
+   }
+    // 推荐内容结束
+    // 点击跳转省钱开始
+    #btn{
+        // width: 100%;
+        text-align: center;
+        border: .01rem solid #ccc;
+        margin: .1rem;
+        background-color: #fff;
+        a{
+            display: block;
+            width: 100%;
+            color: #000;
+            font-size: .14rem;
+            line-height: .35rem;
+        }
+    }
+}
+
+
