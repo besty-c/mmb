@@ -1,7 +1,13 @@
 $(function(){
     // 渲染品牌大全标题
     $.ajax({
-        url:'http://47.52.242.30:9090/api/getbrandtitle',
+        beforeSend: function () {
+            $('body').addClass('loadding')
+        },
+        complete: function () {
+            $('body').removeClass('loadding')
+        },
+        url:'http://localhost:9090/api/getbrandtitle',
         success:function(result){
             console.log(result);
             var html=template('brandtitle',result)

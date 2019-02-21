@@ -2,9 +2,15 @@ $(function(){
     // 页面首页 请求
     var id = 0
     $.ajax({
+        beforeSend: function () {
+            $('body').addClass('loadding')
+        },
+        complete: function () {
+            $('body').removeClass('loadding')
+        },
         url:"http://localhost:9090/api/getinlanddiscount",
         success:function(obj){
-            console.log(obj);
+            // console.log(obj);
            id = obj.result[0]._id
             console.log(id);
             
@@ -19,15 +25,15 @@ $(function(){
         var id = $(this).data("id");
         location="inlanddiscountDetail.html?id="+id
 
-    $.ajax({
-        url:"http://localhost:9090/api/getdiscountproduct",
-        data:{
-            productid:id
-        },
-        success:function(obj){
-            console.log(obj);
-        }
-    })
+    // $.ajax({
+    //     url:"http://localhost:9090/api/getdiscountproduct",
+    //     data:{
+    //         productid:id
+    //     },
+    //     success:function(obj){
+    //         console.log(obj);
+    //     }
+    // })
     
     })
 })

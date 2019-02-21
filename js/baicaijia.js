@@ -39,6 +39,12 @@ $(function () {
     //封装获取商品详情的函数
     function getGoods() {
         $.ajax({
+            beforeSend: function () {
+                $('body').addClass('loadding')
+            },
+            complete: function () {
+                $('body').removeClass('loadding')
+            },
             url: "http://localhost:9090/api/getbaicaijiaproduct",
             data: {
                 titleid: titleid

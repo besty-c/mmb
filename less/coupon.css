@@ -15,60 +15,51 @@ a {
 html {
   font-size: 26.66667vw;
 }
-h1,
-h2,
-h3,
-h4 {
-  font-size: 100%;
-}
-.header {
+#header {
   display: flex;
   height: .45rem;
   line-height: .45rem;
   background-color: #ff841d;
   text-align: center;
 }
-.header .left {
+#header .left {
   width: .5rem;
 }
-.header .left .fa-chevron-left {
-  color: #fff;
-}
-.header .left a {
+#header .left a {
   display: block;
   line-height: .45rem;
   padding: 0 .1rem;
 }
-.header .left a::before {
+#header .left a::before {
   font-size: .3rem;
   color: #fff;
 }
-.header h4 {
-  line-height: normal;
-}
-.header .left-img {
+#header .left-img {
   width: 2rem;
   padding: 0 .1rem;
 }
-.header .left-img a {
+#header .left-img a {
   display: block;
 }
-.header .left-img a img {
+#header .left-img a img {
   width: 100%;
 }
-.header .center {
+#header .center {
   flex: 1;
   color: #fff;
+  line-height: .45rem;
+  text-align: center;
 }
-.header .right {
+#header .right {
   width: .5rem;
 }
-.header .right a {
+#header .right a {
   display: block;
   height: 100%;
   padding: 0 .1rem;
+  line-height: .45rem;
 }
-.header .right a img {
+#header .right a img {
   width: 100%;
 }
 #footer {
@@ -112,6 +103,9 @@ h4 {
 #footer .enter ul li:nth-child(3) {
   flex: 1;
 }
+#footer .enter ul li i {
+  color: #747474;
+}
 #footer .enter ul li a {
   font-size: .13rem;
   color: #747474;
@@ -134,8 +128,141 @@ h4 {
 #footer .download p:nth-child(1) span {
   color: #9d9d9d;
 }
-.header .center {
-  margin-top: .1rem;
+a {
+  background-size: 30px 30px;
+}
+.ring > a:nth-child(1) {
+  background-image: url("../images/ic_search.png");
+}
+.ring > a:nth-child(2) {
+  background-image: url("../images/ic_cu.png");
+}
+.ring > a:nth-child(3) {
+  background-image: url("../images/ic_coudanpin.png");
+}
+.ring > a:nth-child(4) {
+  background-image: url("../images/ic_bcj.png");
+}
+.ring > a:nth-child(5) {
+  background-image: url("../images/haitao.png");
+}
+.ring > a:nth-child(6) {
+  background-image: url("../images/ic_temai.png");
+}
+.ring > a:nth-child(7) {
+  background-image: url("../images/ic_coudanpin.png");
+}
+.ring > a:nth-child(8) {
+  background-image: url("../images/home.png");
+}
+.circle {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 45px;
+  left: 0px;
+  z-index: 999;
+  background-image: url(../images/ball.jpg);
+  background-size: cover;
+  border-radius: 50%;
+}
+.ring {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(-270deg);
+  -moz-transform: scale(0) rotate(-270deg);
+  -transform: scale(0) rotate(-270deg);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.open.ring {
+  left: -45px;
+  top: -45px;
+  opacity: 1;
+  width: 120px;
+  height: 120px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: scale(1) rotate(0deg);
+  -moz-transform: scale(1) rotate(0deg);
+  -transform: scale(1) rotate(0deg);
+}
+.center1 {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #b3b3b3;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.open.center1 {
+  border-color: #aaaaaa;
+}
+.menuItem {
+  border-radius: 50%;
+  color: #eeeeee;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+}
+.mask {
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+}
+.hide {
+  display: none;
+}
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  content: "";
+  z-index: 1000;
+}
+.loadding::after {
+  font: normal normal normal 0.14rem/1 FontAwesome;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -0.5rem;
+  font-size: 1rem;
+  color: #333;
+  content: "\f110";
+  z-index: 1001;
+  animation: fa-spin 1s infinite linear;
+}
+#header .center h4 {
+  font-size: .2rem;
+  line-height: .45rem;
+  display: block;
+  margin: 0;
 }
 #main {
   margin-top: .2rem;

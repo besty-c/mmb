@@ -9,7 +9,7 @@ $(function(){
     $('#main .mmbcom .mui-media-body .mui-ellipsis').html(productName)
 
     $.ajax({
-        url:'http://47.52.242.30:9090/api/getproductcom',
+        url:'http://localhost:9090/api/getproductcom',
         data:{productid:productid},
         success:function(result){
             // console.log(result);

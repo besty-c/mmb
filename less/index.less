@@ -30,6 +30,7 @@
 // 搜索框 结束
 
 
+
 #main {
     background-color: #f1f1f1;
     // 轮播图开始
@@ -44,7 +45,7 @@
     // 轮播图 结束
 
 // 导航栏开始
-    .nav {
+    nav {
         margin-top: .1rem;
         margin-bottom: .07rem;
 
@@ -54,22 +55,58 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-
+            
             li {
                 width: 25%;
+                &:nth-child(11),
+                &:nth-child(10),
+                &:nth-child(12),
+                &:nth-child(9){
+                    // transform: translate(1000px,600px);
+                    animation: scale 1.1s infinite alternate;
+                }
+                &:nth-child(4),
+                &:nth-child(2){
+                    animation: scale 1.3s infinite alternate;
+                }
+                &:nth-child(6),
+                &:nth-child(8){
+                    animation: scale 1.4s infinite alternate;
+                }
+                &:nth-child(7),
+                &:nth-child(5){
+                    animation: scale 1.2s infinite alternate;
+                }
+                &:nth-child(1),
+                &:nth-child(3){
+                    animation: scale 1s infinite alternate;
+                }
                
 
                 &:nth-child(9),
                 &:nth-child(10),
                 &:nth-child(11),
                 &:nth-child(12) {
-                    
                     display: none;
+                }
+                &:nth-child(9){
+                    animation: shake 1.2s infinite alternate;
+                }
+                &:nth-child(10){
+                    animation: shake 1.3s infinite alternate;
+                }
+                &:nth-child(11){
+                    animation: shake 1s infinite alternate;
+                    
+                }
+                &:nth-child(12){
+                    animation: shake 1.4s infinite alternate;
                 }
                 &.hide{
                     display: block;
                 }
                 
+
 
 
                 a {
@@ -82,8 +119,25 @@
                     }
                 }
             }
+            
+           
         }
+    
     }
+    // .nav.animation{
+    //     ul{
+    //         li{
+    //             &:nth-child(9),
+    //             &:nth-child(10),
+    //             &:nth-child(11),
+    //             &:nth-child(12){
+    //                 transition: all 3s;
+    //                 transform: none;
+    //             }
+    //         }
+    //     }
+    // }
+   
 // 导航栏结束
 // 推荐 开始
     .recommend {
@@ -148,124 +202,18 @@
     }
 }
 
+@keyframes shake{
 
-//动感光波的动画
-a{
-	background-size: 30px 30px;
-}
-.ring>a:nth-child(1){background-image: url("../images/ic_search.png");}
-.ring>a:nth-child(2){background-image: url("../images/ic_cu.png");}
-.ring>a:nth-child(3){background-image: url("../images/ic_coudanpin.png");}
-.ring>a:nth-child(4){background-image: url("../images/ic_bcj.png");}
-.ring>a:nth-child(5){background-image: url("../images/haitao.png");}
-.ring>a:nth-child(6){background-image: url("../images/ic_temai.png");}
-.ring>a:nth-child(7){background-image: url("../images/ic_coudanpin.png");}
-.ring>a:nth-child(8){background-image: url("../images/home.png");}
-.circle {
-	position: fixed;
-	height:30px;
-	width:30px;
-	top: 45px;
-	left: 0px;
-    z-index:999;
-    background-image: url(../images/ball.jpg);
-    background-size: cover;
-    border-radius: 50%;
-}
-.ring{
-	position: absolute;
-	left: 15px;
-	top: 15px;
-	width: 0;
-	height: 0;
-	background-color:rgba(0,0,0,0.5);
-	border-radius:50%;
-	opacity:0;
-	-webkit-transform:scale(0) rotate(-270deg);
-	-moz-transform:scale(0) rotate(-270deg);
-	-transform:scale(0) rotate(-270deg);
-	-webkit-transition:all 0.5s ease-out;
-	-moz-transition:all 0.5s ease-out;
-	transition:all 0.5s ease-out;
-}
-.open.ring{
-	left: -45px;
-	top: -45px;
-	opacity:1;
-	width: 120px;
-	height: 120px;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
-	-webkit-transform:scale(1) rotate(0deg);
-	-moz-transform:scale(1) rotate(0deg);
-	-transform:scale(1) rotate(0deg);
-}
-.center1{
-	display: block;
-	width: 30px;
-	height: 30px;
-	border-radius:50%;
-	border:2px solid #b3b3b3;
-	background-color:rgba(0,0,0,0.5);
-	-webkit-transition:all 0.4s ease-out;
-	-moz-transition:all 0.4s ease-out;
-	transition:all 0.4s ease-out;
-}
-.open.center1{border-color:#aaaaaa;}
-.menuItem{
-	border-radius:50%;
-	color:#eeeeee;
-	display:block;
-	height:30px;
-	line-height:30px;
-	margin-left:-15px;
-	margin-top:-15px;
-	position:absolute;
-	text-align:center;
-	width:30px;
-}
-.mask {
-	top: 0;
-	left: 0;
-	z-index:900;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0);
-	position: fixed;
-}
-.hide{
-	display: none;
-}
-
-//请求动画
-.loadding {
-    &::before {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        opacity: .5;
-        content: "";
-        z-index: 1000;
-    }
-
-    &::after {
-        font: normal normal normal .14rem/1 FontAwesome;
-        position: fixed;
-        top: 40%;
-        left: 50%;
-        margin-left: -0.5rem;
-        font-size: 1rem;
-        color: #333;
-        content: "\f110";
-        z-index: 1001;
-        animation: fa-spin 1s infinite linear;
+    from{}
+    to{
+        transform: translateY(-10px);
     }
 }
 
+@keyframes scale{
 
+    from{}
+    to{
+        transform: scale(1.1);
+    }
+}

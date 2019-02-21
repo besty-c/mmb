@@ -26,6 +26,12 @@ function getData(pageID) {
     }
 
     $.ajax({
+        beforeSend: function () {
+            $('body').addClass('loadding')
+        },
+        complete: function () {
+            $('body').removeClass('loadding')
+        },
         url: 'http://localhost:9090/api/getmoneyctrl',
         data: {
             pageid: pageID,

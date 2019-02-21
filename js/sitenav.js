@@ -1,5 +1,11 @@
 $(function () {  
     $.ajax({
+        beforeSend: function () {
+            $('body').addClass('loadding')
+        },
+        complete: function () {
+            $('body').removeClass('loadding')
+        },
         url: "http://47.52.242.30:9090/api/getsitenav",
         success: function (data) {
             console.log(data);
