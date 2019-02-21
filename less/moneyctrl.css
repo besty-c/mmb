@@ -80,7 +80,10 @@ body {
   justify-content: flex-start;
   height: 0.9rem;
   padding: 0.3rem;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> d03eef34e1ca02fe9bea44a0485e23da1d2750eb
 }
 #paging #previous,
 #paging #below {
@@ -90,14 +93,21 @@ body {
   padding: 0 0.15rem;
 }
 #paging #selectAge {
+<<<<<<< HEAD
   width: .4rem;
+=======
+>>>>>>> d03eef34e1ca02fe9bea44a0485e23da1d2750eb
   display: flex;
   padding: 0;
   height: 0.3rem;
   line-height: 0.3rem;
   margin: 0;
   text-align: center;
+<<<<<<< HEAD
   margin: 0 0.6rem;
+=======
+  margin: 0 0.7rem;
+>>>>>>> d03eef34e1ca02fe9bea44a0485e23da1d2750eb
   background-color: #fff;
 }
 #footer {
