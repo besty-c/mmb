@@ -95,6 +95,12 @@ $(function () {
     //发送商品列表请求
     function getgsdetail() {
         $.ajax({
+            beforeSend: function () {
+                $('body').addClass('loadding')
+            },
+            complete: function () {
+                $('body').removeClass('loadding')
+            },
             url: 'http://localhost:9090/api/getgsproduct',
             data: {
                 shopid: shopId,

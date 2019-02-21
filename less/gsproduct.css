@@ -63,6 +63,7 @@ html {
   width: 100%;
 }
 #footer {
+  background-color: #efeff4;
   height: 1.74rem;
 }
 #footer .rank {
@@ -335,6 +336,7 @@ a {
 .main .product-list .product-ul li {
   box-sizing: border-box;
   margin-bottom: .05rem;
+  height: 2.68rem;
 }
 .main .product-list .product-ul li a {
   background-color: #fff;

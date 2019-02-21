@@ -11,6 +11,12 @@ $(function () {
         data: {
             productid: id
         },
+        beforeSend: function () {
+            $('body').addClass('loadding')
+        },
+        complete: function () {
+            $('body').removeClass('loadding')
+        },
         success: function (obj) {
             console.log(obj);
             var html = template("details", obj)
@@ -21,25 +27,26 @@ $(function () {
     });
 
 
-    $(".discuss").on("tap",'.tjdp', function () {
+    $(".discuss").on("tap",'.tjdp', function (e) {
+        // e.preventDefault();
         var text = $("#ctl00_ContentBody_txt_nr").val().trim();
        if(text==""){
            mui.alert("内容不能为空");
-
        }else{
-        var li = `<li class="mui-card-header mui-card-media">
+           var li = `<li class="mui-card-header mui-card-media">
         <img src="../images/logo.png" />
         <div class="mui-media-body">
         小M
-        <p>`+text+`</p>
+        <p>`+ text + `</p>
         <p>发表于 2016-06-30 15:30</p>
         </div>
     </li>`;
-    // console.log(div);
-    $(".list ul").prepend(li)
-    $("#ctl00_ContentBody_txt_nr").val("");
+           // console.log(div);
+           $(".list ul").prepend(li);
+           $("#ctl00_ContentBody_txt_nr").val("");
+          
        }
-
+    //    return false;    
 
                     
 

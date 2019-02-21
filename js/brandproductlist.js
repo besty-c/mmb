@@ -8,7 +8,13 @@ $(function () {
 
     function getBrandProductList(count) {
         $.ajax({
-            url: 'http://47.52.242.30:9090/api/getbrandproductlist',
+            beforeSend: function () {
+                $('body').addClass('loadding')
+            },
+            complete: function () {
+                $('body').removeClass('loadding')
+            },
+            url: 'http://localhost:9090/api/getbrandproductlist',
             data: {
                 brandtitleid: dataTitleId,
                 pagesize: 4 * count

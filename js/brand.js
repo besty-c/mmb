@@ -5,7 +5,13 @@ $(function(){
     var brandtitle = getQueryString('brandtitle')
     // console.log(brandtitleid);
     $.ajax({
-        url:'http://47.52.242.30:9090/api/getbrand',
+        beforeSend: function () {
+            $('body').addClass('loadding')
+        },
+        complete: function () {
+            $('body').removeClass('loadding')
+        },
+        url:'http://localhost:9090/api/getbrand',
         data:{
             brandtitleid:brandtitleid,
         },
