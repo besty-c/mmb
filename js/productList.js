@@ -85,6 +85,7 @@ $(function () {
 
                 //更新页器
                 $('.btn_picker').html(page + '/' + total);
+                userPicker.pickers[0].setSelectedValue(page,200);
 
                 for (var i = 0; i < obj.result.length; i++) {
                     obj.result[i]['total'] = total;
